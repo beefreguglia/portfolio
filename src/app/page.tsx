@@ -1,65 +1,96 @@
-import Image from "next/image";
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#121212] bg-[radial-gradient(#ffffff20_1px,transparent_1px)] px-6 [background-size:20px_20px]">
+      {/* Container Principal */}
+      <motion.div
+        className="z-10 mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 lg:grid-cols-2"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Coluna da Esquerda: Textos e Call to Action */}
+        <div className="flex flex-col gap-6 text-left">
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            <Terminal size={16} className="text-[#00E5FF]" />
+            <span className="font-mono text-gray-300 text-sm">
+              Fullstack Developer
+            </span>
+          </motion.div>
+
+          <motion.h1
+            variants={itemVariants}
+            className="font-bold text-5xl text-white leading-tight tracking-tight lg:text-7xl"
+          >
+            Transformando <br />
+            ideias em <span className="text-[#00E5FF]">código</span>
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="max-w-lg text-gray-400 text-lg leading-relaxed"
+          >
+            Especialista em criar soluções digitais escaláveis e experiências de
+            usuário de alto impacto. Foco em performance, design limpo e
+            arquitetura moderna.
+          </motion.p>
+
+          <motion.div
+            variants={itemVariants}
+            className="mt-4 flex flex-wrap items-center gap-4"
+          >
+            {/* Botão Primário com Glow Ciano (Estilo Shadcn + Customização) */}
+            <button className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-md bg-[#00E5FF] px-8 py-3 font-semibold text-[#121212] text-sm shadow-[0_0_15px_rgba(0,229,255,0.4)] transition-all hover:bg-[#00cce6] hover:shadow-[0_0_25px_rgba(0,229,255,0.7)]">
+              Ver Projetos
+              <ArrowRight
+                size={18}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </button>
+
+            {/* Botões Sociais */}
+            <button className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 p-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-[#00E5FF]">
+              <Github size={20} />
+            </button>
+            <button className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 p-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-[#00E5FF]">
+              <Linkedin size={20} />
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Coluna da Direita: Imagem/Elemento Visual */}
+        <motion.div
+          variants={itemVariants}
+          className="relative flex justify-center lg:justify-end"
+        >
+          {/* Efeito de Glow atrás da foto */}
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 h-72 w-72 animate-pulse rounded-full bg-[#00E5FF] opacity-20 blur-[120px]" />
+
+          {/* Container da Imagem (Placeholder) */}
+          <div className="relative z-10 h-72 w-72 overflow-hidden rounded-2xl border border-white/10 bg-[#1e1e1e] grayscale transition-all duration-500 hover:grayscale-0 lg:h-96 lg:w-96">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+              alt="Seu Retrato"
+              className="h-full w-full object-cover opacity-80"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 }
