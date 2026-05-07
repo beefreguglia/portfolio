@@ -1,9 +1,16 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { Fira_Code, Inter } from 'next/font/google';
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  variable: '--font-fira',
+});
 
 export const metadata: Metadata = {
   title: 'Protfolio Bernardo Freguglia',
@@ -16,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={cn("font-sans", inter.variable)}>
+    <html lang="pt-BR" className={`${inter.variable} ${firaCode.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );
