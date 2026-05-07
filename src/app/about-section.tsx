@@ -44,7 +44,7 @@ export function AboutSection() {
   return (
     <>
       <section
-        id="sobre"
+        id="about"
         className="relative overflow-hidden border-white/5 border-t bg-[#030303] px-6 py-20"
       >
         <motion.div

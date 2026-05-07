@@ -19,9 +19,9 @@ export function Header() {
 
   const navLinks = [
     { href: '#hero', label: 'INÍCIO', color: 'hover:text-cyan-400' },
-    { href: '#sobre', label: 'SOBRE', color: 'hover:text-purple-400' },
+    { href: '#about', label: 'SOBRE', color: 'hover:text-purple-400' },
     { href: '#stack', label: 'STACK', color: 'hover:text-emerald-400' },
-    { href: '#projetos', label: 'PROJETOS', color: 'hover:text-cyan-400' },
+    { href: '#projects', label: 'PROJETOS', color: 'hover:text-cyan-400' },
   ];
 
   return (
