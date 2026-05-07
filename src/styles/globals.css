@@ -5,40 +5,36 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Fontes - Ajustadas para os nomes padrões do Next.js */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-mono: var(--font-fira), ui-monospace, SFMono-Regular;
+  --font-heading: var(--font-inter);
+
+  /* Cores Shadcn */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Suas Cores Customizadas */
+  --color-cyan-custom: var(--cyan-custom);
+
+  /* Raios de Borda Shadcn */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -46,9 +42,74 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Registro de Animações Customizadas para usar com @apply */
+  --animate-glitch-1: glitch-anim-1 2s infinite linear alternate-reverse;
+  --animate-glitch-2: glitch-anim-2 3s infinite linear alternate-reverse;
+  --animate-spin-slow: spin 15s linear infinite;
+  --animate-spin-reverse: spin-reverse 20s linear infinite;
+  --animate-infinite-scroll: scroll-horizontal 35s linear infinite;
+
+  @keyframes glitch-anim-1 {
+    0% {
+      clip-path: inset(20% 0 80% 0);
+    }
+    20% {
+      clip-path: inset(60% 0 10% 0);
+    }
+    40% {
+      clip-path: inset(40% 0 50% 0);
+    }
+    60% {
+      clip-path: inset(80% 0 5% 0);
+    }
+    80% {
+      clip-path: inset(10% 0 70% 0);
+    }
+    100% {
+      clip-path: inset(30% 0 50% 0);
+    }
+  }
+
+  @keyframes glitch-anim-2 {
+    0% {
+      clip-path: inset(10% 0 60% 0);
+    }
+    20% {
+      clip-path: inset(30% 0 20% 0);
+    }
+    40% {
+      clip-path: inset(70% 0 10% 0);
+    }
+    60% {
+      clip-path: inset(20% 0 50% 0);
+    }
+    80% {
+      clip-path: inset(50% 0 30% 0);
+    }
+    100% {
+      clip-path: inset(5% 0 80% 0);
+    }
+  }
+
+  @keyframes spin-reverse {
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes scroll-horizontal {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 :root {
+  /* Cores Shadcn (OKLCH) */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -67,20 +128,8 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --cyan-custom: hsl(189 94% 43%);
 }
 
 .dark {
@@ -88,33 +137,9 @@
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer base {
@@ -122,9 +147,77 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
-  html {
-    @apply font-sans;
+}
+
+@layer utilities {
+  .hero-dark-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+    pointer-events: none;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+    color: var(--color-emerald-500);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 hsl(var(--cyan));
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+  }
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: 2px 0 hsl(var(--primary));
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+}
+
+@layer components {
+  .infinite-menu-wrapper {
+    @apply w-screen relative py-8 overflow-hidden;
+    margin-left: calc(-50vw + 50%);
+  }
+  .infinite-menu-wrapper::before,
+  .infinite-menu-wrapper::after {
+    content: "";
+    @apply absolute inset-y-0 w-1/5 z-20 pointer-events-none;
+  }
+  .infinite-menu-wrapper::before {
+    @apply left-0 bg-gradient-to-r from-black to-transparent;
+  }
+  .infinite-menu-wrapper::after {
+    @apply right-0 bg-gradient-to-l from-black to-transparent;
+  }
+  .infinite-scroll-track {
+    @apply flex gap-8 w-max animate-infinite-scroll hover:[animation-play-state:paused];
   }
 }
