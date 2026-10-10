@@ -1,27 +1,23 @@
-type BadgeVariant = 'default' | 'secondary' | 'destructive' | 'outline';
+import type * as React from 'react';
+import { type Rarity, rarityBorder, rarityText } from '@/components/ds/rarity';
+import { cn } from '@/lib/utils';
 
-interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: BadgeVariant;
+interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+  rarity?: Rarity;
 }
 
-export const Badge: React.FC<BadgeProps> = ({
-  children,
-  variant = 'default',
-  className = '',
-  ...props
-}) => {
-  const variants: Record<BadgeVariant, string> = {
-    default: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-    secondary: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
-    destructive: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-    outline: 'text-gray-400 border-gray-700',
-  };
+export function Badge({ rarity, className, ...props }: BadgeProps) {
   return (
-    <div
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 font-mono font-semibold text-[10px] transition-colors focus:outline-none ${variants[variant]} ${className}`}
+    <span
+      data-slot="badge"
+      className={cn(
+        'inline-flex items-center gap-1.5 rounded-md border bg-abyss-deep/60 px-2 py-0.5 font-mono text-[0.7rem] leading-5 transition-colors',
+        rarity
+          ? [rarityText[rarity], rarityBorder[rarity]]
+          : 'border-iron text-ash hover:border-aqua-700 hover:text-aqua-200',
+        className
+      )}
       {...props}
-    >
-      {children}
-    </div>
+    />
   );
-};
+}
