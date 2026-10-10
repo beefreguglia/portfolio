@@ -2,15 +2,56 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* O site é dark-only: o tema "Santuário" não tem modo claro. */
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Fontes - Ajustadas para os nomes padrões do Next.js */
+  /* Tipografia */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui;
-  --font-mono: var(--font-fira), ui-monospace, SFMono-Regular;
-  --font-heading: var(--font-inter);
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular;
+  --font-heading: var(--font-cinzel), "Times New Roman", serif;
+  --font-display: var(--font-cinzel), "Times New Roman", serif;
 
-  /* Cores Shadcn */
+  /* Superfícies */
+  --color-abyss: var(--abyss);
+  --color-abyss-deep: var(--abyss-deep);
+  --color-stone-1: var(--stone-1);
+  --color-stone-2: var(--stone-2);
+  --color-stone-3: var(--stone-3);
+  --color-iron: var(--iron);
+  --color-iron-bright: var(--iron-bright);
+
+  /* Texto */
+  --color-bone: var(--bone);
+  --color-ash: var(--ash);
+  --color-smoke: var(--smoke);
+
+  /* Verde-água: a alma do Santuário */
+  --color-aqua-50: var(--aqua-50);
+  --color-aqua-100: var(--aqua-100);
+  --color-aqua-200: var(--aqua-200);
+  --color-aqua-300: var(--aqua-300);
+  --color-aqua-400: var(--aqua-400);
+  --color-aqua-500: var(--aqua-500);
+  --color-aqua-600: var(--aqua-600);
+  --color-aqua-700: var(--aqua-700);
+  --color-aqua-800: var(--aqua-800);
+  --color-aqua-900: var(--aqua-900);
+  --color-aqua-950: var(--aqua-950);
+
+  /* Acentos */
+  --color-gold: var(--gold);
+  --color-gold-dim: var(--gold-dim);
+  --color-blood: var(--blood);
+
+  /* Raridade dos itens */
+  --color-rarity-common: var(--rarity-common);
+  --color-rarity-magic: var(--rarity-magic);
+  --color-rarity-rare: var(--rarity-rare);
+  --color-rarity-set: var(--rarity-set);
+  --color-rarity-legendary: var(--rarity-legendary);
+
+  /* Tokens semânticos (shadcn) */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -31,193 +72,276 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Suas Cores Customizadas */
-  --color-cyan-custom: var(--cyan-custom);
-
-  /* Raios de Borda Shadcn */
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
 
-  /* Registro de Animações Customizadas para usar com @apply */
-  --animate-glitch-1: glitch-anim-1 2s infinite linear alternate-reverse;
-  --animate-glitch-2: glitch-anim-2 3s infinite linear alternate-reverse;
-  --animate-spin-slow: spin 15s linear infinite;
-  --animate-spin-reverse: spin-reverse 20s linear infinite;
-  --animate-infinite-scroll: scroll-horizontal 35s linear infinite;
+  --shadow-glow-sm: 0 0 12px -2px oklch(from var(--aqua-400) l c h / 0.45);
+  --shadow-glow: 0 0 28px -4px oklch(from var(--aqua-400) l c h / 0.55);
+  --shadow-glow-gold: 0 0 28px -4px oklch(from var(--gold) l c h / 0.5);
+  --shadow-panel:
+    0 24px 60px -20px oklch(0 0 0 / 0.9), inset 0 1px 0 oklch(1 0 0 / 0.04);
 
-  @keyframes glitch-anim-1 {
+  --animate-ember-rise: ember-rise var(--ember-duration, 9s) linear infinite;
+  --animate-rune-pulse: rune-pulse 3.2s ease-in-out infinite;
+  --animate-orb-swirl: orb-swirl 14s linear infinite;
+
+  @keyframes ember-rise {
     0% {
-      clip-path: inset(20% 0 80% 0);
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 0;
     }
-    20% {
-      clip-path: inset(60% 0 10% 0);
-    }
-    40% {
-      clip-path: inset(40% 0 50% 0);
-    }
-    60% {
-      clip-path: inset(80% 0 5% 0);
-    }
-    80% {
-      clip-path: inset(10% 0 70% 0);
+    10% {
+      opacity: 1;
     }
     100% {
-      clip-path: inset(30% 0 50% 0);
+      transform: translate3d(var(--ember-drift, 20px), -100vh, 0) scale(0.4);
+      opacity: 0;
     }
   }
 
-  @keyframes glitch-anim-2 {
-    0% {
-      clip-path: inset(10% 0 60% 0);
-    }
-    20% {
-      clip-path: inset(30% 0 20% 0);
-    }
-    40% {
-      clip-path: inset(70% 0 10% 0);
-    }
-    60% {
-      clip-path: inset(20% 0 50% 0);
-    }
-    80% {
-      clip-path: inset(50% 0 30% 0);
-    }
+  @keyframes rune-pulse {
+    0%,
     100% {
-      clip-path: inset(5% 0 80% 0);
+      opacity: 0.55;
+      filter: drop-shadow(0 0 2px var(--aqua-400));
+    }
+    50% {
+      opacity: 1;
+      filter: drop-shadow(0 0 8px var(--aqua-300));
     }
   }
 
-  @keyframes spin-reverse {
+  @keyframes orb-swirl {
     to {
-      transform: translate(-50%, -50%) rotate(-360deg);
-    }
-  }
-
-  @keyframes scroll-horizontal {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
+      transform: rotate(360deg);
     }
   }
 }
 
 :root {
-  /* Cores Shadcn (OKLCH) */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --radius: 0.625rem;
-  --cyan-custom: hsl(189 94% 43%);
-}
+  color-scheme: dark;
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --border: oklch(1 0 0 / 10%);
+  /* Superfícies: pedra fria com um sopro de verde */
+  --abyss-deep: oklch(0.1 0.01 195);
+  --abyss: oklch(0.135 0.012 195);
+  --stone-1: oklch(0.17 0.013 195);
+  --stone-2: oklch(0.205 0.015 195);
+  --stone-3: oklch(0.25 0.017 195);
+  --iron: oklch(0.33 0.02 195);
+  --iron-bright: oklch(0.45 0.025 195);
+
+  /* Texto: osso e cinzas */
+  --bone: oklch(0.93 0.018 85);
+  --ash: oklch(0.76 0.018 85);
+  --smoke: oklch(0.6 0.014 85);
+
+  /* Verde-água */
+  --aqua-50: oklch(0.97 0.03 180);
+  --aqua-100: oklch(0.94 0.06 180);
+  --aqua-200: oklch(0.89 0.1 180);
+  --aqua-300: oklch(0.84 0.13 180);
+  --aqua-400: oklch(0.78 0.14 180);
+  --aqua-500: oklch(0.7 0.13 182);
+  --aqua-600: oklch(0.6 0.11 184);
+  --aqua-700: oklch(0.5 0.09 186);
+  --aqua-800: oklch(0.4 0.07 188);
+  --aqua-900: oklch(0.3 0.05 190);
+  --aqua-950: oklch(0.2 0.035 192);
+
+  /* Acentos */
+  --gold: oklch(0.8 0.13 75);
+  --gold-dim: oklch(0.62 0.1 70);
+  --blood: oklch(0.55 0.19 25);
+
+  /* Raridade */
+  --rarity-common: oklch(0.86 0.005 85);
+  --rarity-magic: oklch(0.7 0.14 262);
+  --rarity-rare: oklch(0.88 0.15 98);
+  --rarity-set: var(--aqua-400);
+  --rarity-legendary: oklch(0.76 0.16 58);
+
+  /* Mapeamento semântico */
+  --background: var(--abyss);
+  --foreground: var(--bone);
+  --card: var(--stone-1);
+  --card-foreground: var(--bone);
+  --popover: var(--stone-1);
+  --popover-foreground: var(--bone);
+  --primary: var(--aqua-400);
+  --primary-foreground: var(--abyss-deep);
+  --secondary: var(--stone-2);
+  --secondary-foreground: var(--bone);
+  --muted: var(--stone-2);
+  --muted-foreground: var(--ash);
+  --accent: var(--stone-3);
+  --accent-foreground: var(--bone);
+  --destructive: var(--blood);
+  --destructive-foreground: var(--bone);
+  --border: var(--iron);
+  --input: var(--iron);
+  --ring: var(--aqua-400);
+  --radius: 0.5rem;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/60;
   }
+
+  html {
+    background: var(--abyss-deep);
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background font-sans text-foreground antialiased;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: oklch(from var(--aqua-400) l c h / 0.35);
+    color: var(--bone);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--aqua-400);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer utilities {
-  .hero-dark-bg::before {
+  /* Textura de pedra: ruído sutil + vinheta, sem imagens externas */
+  .bg-stone-texture {
+    background-image:
+      radial-gradient(
+        ellipse at top,
+        oklch(from var(--aqua-900) l c h / 0.35),
+        transparent 60%
+      ),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  .text-glow {
+    text-shadow:
+      0 0 18px oklch(from var(--aqua-400) l c h / 0.55),
+      0 0 2px oklch(from var(--aqua-200) l c h / 0.8);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 18px oklch(from var(--gold) l c h / 0.45);
+  }
+
+  /* Gradiente metálico para títulos */
+  .text-engraved {
+    background: linear-gradient(
+      180deg,
+      var(--bone) 0%,
+      var(--ash) 55%,
+      var(--smoke) 100%
+    );
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 2px 0 oklch(0 0 0 / 0.6));
+  }
+
+  .text-engraved-aqua {
+    background: linear-gradient(
+      180deg,
+      var(--aqua-100) 0%,
+      var(--aqua-300) 45%,
+      var(--aqua-600) 100%
+    );
+    background-clip: text;
+    color: transparent;
+  }
+
+  .panel {
+    background:
+      linear-gradient(180deg, oklch(1 0 0 / 0.025), transparent 40%),
+      var(--stone-1);
+    border: 1px solid var(--iron);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .panel:not([role="dialog"]) {
+    position: relative;
+  }
+
+  /* Brilho que segue o cursor (posição vem do PointerGlow) */
+  .panel::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-      linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px);
-    background-size: 50px 50px;
-    z-index: 0;
+    inset: 0;
+    border-radius: inherit;
     pointer-events: none;
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 50%),
+      oklch(from var(--aqua-400) l c h / 0.07),
+      transparent 60%
     );
   }
-  .glitch-text {
-    position: relative;
-    display: inline-block;
-    color: var(--color-emerald-500);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
-  .glitch-text::before,
-  .glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-  }
-  .glitch-text::before {
-    left: 2px;
-    text-shadow: -2px 0 hsl(var(--cyan));
-    animation: glitch-anim-1 2s infinite linear alternate-reverse;
-  }
-  .glitch-text::after {
-    left: -2px;
-    text-shadow: 2px 0 hsl(var(--primary));
-    animation: glitch-anim-2 3s infinite linear alternate-reverse;
-  }
-}
 
-@layer components {
-  .infinite-menu-wrapper {
-    @apply w-screen relative py-8 overflow-hidden;
-    margin-left: calc(-50vw + 50%);
+  .panel:hover::after {
+    opacity: 1;
   }
-  .infinite-menu-wrapper::before,
-  .infinite-menu-wrapper::after {
+
+  /* Sublinhado que cresce do centro, para links de navegação */
+  .link-rune {
+    position: relative;
+  }
+
+  .link-rune::after {
     content: "";
-    @apply absolute inset-y-0 w-1/5 z-20 pointer-events-none;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -6px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--aqua-300),
+      transparent
+    );
+    transition:
+      left 0.3s ease,
+      right 0.3s ease;
   }
-  .infinite-menu-wrapper::before {
-    @apply left-0 bg-gradient-to-r from-black to-transparent;
-  }
-  .infinite-menu-wrapper::after {
-    @apply right-0 bg-gradient-to-l from-black to-transparent;
-  }
-  .infinite-scroll-track {
-    @apply flex gap-8 w-max animate-infinite-scroll hover:[animation-play-state:paused];
+
+  .link-rune:hover::after,
+  .link-rune:focus-visible::after {
+    left: -4px;
+    right: -4px;
   }
 }

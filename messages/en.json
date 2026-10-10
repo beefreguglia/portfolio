@@ -1,0 +1,648 @@
+{
+  "meta": {
+    "title": "Bernardo Freguglia · Full-stack Engineer",
+    "description": "Full-stack developer with 4+ years of experience in React, Next.js, TypeScript, NestJS and applied AI (RAG, LLMs). B.Sc. in Computer Science from UFOP, Brazil.",
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "sheet": "Character",
+    "journey": "Journey",
+    "arsenal": "Arsenal",
+    "talents": "Talents",
+    "achievements": "Achievements",
+    "portal": "Contact",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "recruiter": "Recruiter mode",
+    "language": "Language",
+    "backToTop": "Back to top",
+    "progress": "Journey progress"
+  },
+  "hero": {
+    "kicker": "A new hero awakens",
+    "class": "Full-stack Engineer",
+    "summary": "I turn ideas into real products: multi-tenant platforms, rule-heavy scheduling, multi-property booking calendars and, lately, AI-powered systems. 4+ years in production, freshly graduated in Computer Science.",
+    "available": "Available for new quests",
+    "stats": {
+      "years": "years in production",
+      "level": "level (since 2012)",
+      "companies": "companies"
+    },
+    "cta": {
+      "start": "Begin the journey",
+      "cv": "Download CV",
+      "recruiter": "Recruiter mode"
+    },
+    "scroll": "Scroll down"
+  },
+  "sheet": {
+    "kicker": "Character Sheet",
+    "title": "Who wields the keyboard",
+    "portraitAlt": "Photo of Bernardo Freguglia",
+    "classLabel": "Class",
+    "classValue": "Full-stack · Front-end",
+    "levelLabel": "Level",
+    "originLabel": "Origin",
+    "originValue": "Ouro Preto, Brazil · Remote",
+    "guildLabel": "Guild",
+    "guildValue": "Looking for a party",
+    "bio": [
+      "I started in 2012 writing Minecraft plugins just to see what would happen. Since then, curiosity became a profession: a student-run consultancy, a scale-up, contract work and a startup, always on products used by real customers.",
+      "At Seazone I grew from intern to front-end developer on a vacation-rental management system with multiple user roles and complex permissions. Then, as a full-stack developer, I built the clinic scheduling engine at Anjos Guia and the front end of Centra's B2B platform.",
+      "I paused to finish my Computer Science degree at UFOP, where my thesis became an LLM-based recommendation framework with RAG. Now I'm back with the best of both worlds: product experience and a solid academic foundation."
+    ],
+    "attributesTitle": "Attributes",
+    "attributes": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "ai": "Applied AI",
+      "people": "People & Product"
+    },
+    "traitsTitle": "Passives",
+    "traits": [
+      "Clear communication with product, design and support",
+      "Management background (Marketing and HR at a junior enterprise)",
+      "Cares about polished interfaces and readable code",
+      "Fast learner: Vue, Bun, Elysia and AI in the last year"
+    ],
+    "interestsTitle": "Away from the code",
+    "interests": "Fan of the Diablo franchise (yes, you can tell), tabletop RPGs (Pathfinder 2e) and any game with a talent tree."
+  },
+  "journey": {
+    "kicker": "The Journey Map",
+    "title": "Five acts so far",
+    "description": "Each waypoint is a real chapter of my career. Scroll to light up the path.",
+    "actLabel": "Act",
+    "present": "present",
+    "questsLabel": "Quests completed",
+    "acts": {
+      "origin": {
+        "title": "Origin",
+        "place": "Minecraft servers",
+        "role": "Sorcerer's apprentice",
+        "summary": "My first code: simple plugins for Minecraft servers. That's where I found out a few lines could change the rules of the game.",
+        "quests": [
+          "First plugins in Java",
+          "Learned that bugs are part of the adventure too"
+        ]
+      },
+      "guild": {
+        "title": "The Guild",
+        "place": "Voluta · UFOP Junior Enterprise",
+        "role": "Member · Marketing → HR",
+        "summary": "At this student-run consultancy I learned how a company works from the inside. I rotated through all five departments (Marketing, Projects, HR, Finance and Administration), was chosen for Marketing and later moved to HR.",
+        "quests": [
+          "Rotation through all 5 departments",
+          "Updates to the ICEB/UFOP institute website (OpenScholar)",
+          "Digital database for the Pilar Church inventory",
+          "Recruiting and people development in HR"
+        ]
+      },
+      "seazone": {
+        "title": "The Rental Sanctuary",
+        "place": "Seazone · Florianópolis (remote)",
+        "role": "Intern → Front-end Developer",
+        "summary": "Three years on SAPRON, the system that manages vacation rentals, connecting owners, hosts and channels like Airbnb and Booking.com. I joined as an intern and left as a junior developer.",
+        "quests": [
+          "Multi-property calendar with horizontal (dates) and vertical (properties) scrolling",
+          "View modes: reservations only, blocks only, and an owner view",
+          "Create and edit forms, many multi-step: hosts, agents and properties",
+          "Guest damage form and new pages with complex permissions",
+          "Support ticket resolution"
+        ]
+      },
+      "mercenary": {
+        "title": "The Mercenary",
+        "place": "DJComphany (Anjos Guia) + Centra · remote",
+        "role": "Full-stack / Front-end Developer",
+        "summary": "Two fronts at once. At Anjos Guia, a multi-tenant platform for beauty salons and clinics, I worked across front and back end. At Centra, an AI startup for the B2B construction-materials market, I owned everything front-end.",
+        "quests": [
+          "Scheduling that matches professionals, procedures, rooms and hours (Clean Architecture + SOLID)",
+          "Message automation with Twilio and cron jobs",
+          "Seasonal visual identity for the whole platform: Christmas, New Year, Easter",
+          "Landing pages and the virtual product catalog at Centra",
+          "Product CRUD for a multi-tenant marketplace"
+        ]
+      },
+      "tome": {
+        "title": "The Tome",
+        "place": "Federal University of Ouro Preto",
+        "role": "B.Sc. in Computer Science",
+        "summary": "I stepped away from the market to close a chapter. My thesis, NoshByte, is an LLM-based dish recommendation framework with RAG, evaluated with 6 models across 90 scenarios. I graduated in August 2026.",
+        "quests": [
+          "Thesis: an LLM-based framework for food recommendation",
+          "RAG pipeline with pgvector and 4 AI providers",
+          "Evaluation with two LLM judges and kappa agreement",
+          "Computer Science degree (2026)"
+        ]
+      }
+    },
+    "next": {
+      "title": "Act VI · Not yet written",
+      "description": "The next chapter could be on your team.",
+      "cta": "Open the portal"
+    }
+  },
+  "arsenal": {
+    "kicker": "The Arsenal",
+    "title": "Legendary items",
+    "description": "Features I built in production, recreated as playable mini-demos, plus personal projects. Select an item to inspect its affixes.",
+    "tabs": {
+      "professional": "Battle-forged",
+      "personal": "Personal projects"
+    },
+    "inventory": "Inventory",
+    "selectHint": "Tap or hover an item",
+    "openDemo": "Try the demo",
+    "viewRepo": "Code",
+    "viewLive": "Live",
+    "requires": "Requires",
+    "close": "Close",
+    "recreated": "Simplified recreation with fake data: the original code is private.",
+    "recreatedPublic": "Preview with the real evaluation data; the full code is on GitHub.",
+    "case": {
+      "problem": "The challenge",
+      "solution": "What I did",
+      "learned": "What I learned"
+    },
+    "rarity": {
+      "common": "Common",
+      "magic": "Magic",
+      "rare": "Rare",
+      "set": "Set",
+      "legendary": "Legendary"
+    },
+    "learning": {
+      "title": "Training log",
+      "description": "The common items: courses and challenges showing consistency since 2020."
+    },
+    "items": {
+      "calendar": {
+        "name": "Grimoire of Stays",
+        "kind": "Multi-property calendar · Seazone",
+        "stats": [
+          "Properties × dates grid with horizontal and vertical scrolling",
+          "+3 view modes: all, reservations or blocks",
+          "Dedicated owner view",
+          "Sticky headers so you never lose your place"
+        ],
+        "flavor": "A thousand bookings, a single glance.",
+        "problem": "The operations team needed to see occupancy for many properties at once, crossing dates, multi-channel reservations and blocks.",
+        "solution": "I built the grid view: dates on top with horizontal scrolling, properties on the left with vertical scrolling, and filters to show only reservations or only blocks. Later I adapted the same foundation into the owner view.",
+        "learned": "Rendering performance for large lists, scroll synchronization, and how a single screen can serve different user roles."
+      },
+      "scheduler": {
+        "name": "Hourglass of the Oracle",
+        "kind": "Clinic scheduling · Anjos Guia",
+        "stats": [
+          "Matches professional, procedure, room and time",
+          "Respects professional and clinic hours",
+          "Only offers staff who can perform the procedure",
+          "Isolated domain with Clean Architecture"
+        ],
+        "flavor": "No slot is offered in vain.",
+        "problem": "Beauty clinics have limited rooms, staff with different skills and shifting hours. Manual scheduling caused conflicts.",
+        "solution": "I modeled scheduling as domain rules: for each procedure, find qualified professionals, intersect their shifts with clinic hours and drop slots with no free room. NestJS + PostgreSQL on the back end, Next.js on the front.",
+        "learned": "Domain modeling, testing rules against edge cases, and the value of keeping business rules apart from frameworks."
+      },
+      "noshbyte": {
+        "name": "Tome of NoshByte",
+        "kind": "Thesis · AI recommendation",
+        "stats": [
+          "RAG pipeline with vector search (pgvector)",
+          "4 providers: OpenAI, Anthropic, Google, Groq",
+          "6 models evaluated across 90 scenarios",
+          "Real-time streaming chat"
+        ],
+        "flavor": "The oracle that knows what you want to eat.",
+        "problem": "Generic food recommendations ignore restrictions, preferences and real reviews. Which LLM recommends best, and at what latency cost?",
+        "solution": "I built a full-stack framework: ElysiaJS (Bun) back end with Drizzle and PostgreSQL, Clean Architecture and DDD; RAG with pgvector embeddings; Next.js front end with streaming chat. I evaluated 6 models with two LLM judges.",
+        "learned": "End-to-end AI engineering: retrieval, prompting, LLM-as-a-judge evaluation, and quality/cost/latency trade-offs."
+      },
+      "multistep": {
+        "name": "Scroll of Summoning",
+        "kind": "Multi-step forms · Seazone",
+        "stats": [
+          "Onboarding for hosts, agents and properties",
+          "Per-step validation before moving on",
+          "Final review before submitting",
+          "User roles with different permissions"
+        ],
+        "flavor": "Every field, a rune in its rightful place.",
+        "problem": "Support staff registered hosts and properties through long, error-prone forms.",
+        "solution": "I built create and edit forms, many of them multi-step, with per-step validation, clear messages and a review before submission.",
+        "learned": "Form UX, schema validation, and how to cut rework for the support team."
+      },
+      "seasonal": {
+        "name": "Masks of the Seasons",
+        "kind": "Platform seasonal themes · Anjos Guia",
+        "stats": [
+          "Platform identity for Christmas, New Year and Easter",
+          "One switch applies to every clinic served",
+          "Campaigns go live without per-client rework",
+          "In the demo: the design-token approach"
+        ],
+        "flavor": "One platform, many clinics, a new season.",
+        "problem": "Anjos Guia serves many clinics and salons from a single system. For every holiday, the business wanted the whole platform dressed for the season.",
+        "solution": "I adapted the system's visual identity for each seasonal campaign (Christmas, New Year, Easter), reflected across every clinic using the platform. The demo shows how clean this gets with design tokens.",
+        "learned": "Design tokens in practice, and how to reskin an entire product without touching every screen."
+      },
+      "catalog": {
+        "name": "Merchant's Forge",
+        "kind": "B2B catalog · Centra",
+        "stats": [
+          "Platform landing pages",
+          "Virtual catalog of construction materials",
+          "Multi-tenant product CRUD",
+          "Next.js + Tailwind + shadcn/ui"
+        ],
+        "flavor": "From brick to counter in a few clicks.",
+        "problem": "Centra wanted to digitize B2B construction-material sales with AI assistance and needed a reliable front end for retailers.",
+        "solution": "I owned the front end: landing pages, the virtual catalog, product CRUD for the marketplace and the multi-tenant experience.",
+        "learned": "Shipping fast without sacrificing quality at a startup, and keeping a lean design system with shadcn/ui."
+      },
+      "saasRbac": {
+        "name": "Seal of the Guilds",
+        "kind": "Next SaaS RBAC · personal project",
+        "stats": [
+          "Multi-tenant SaaS: organizations, invites and members",
+          "RBAC with 5 roles and conditional permissions",
+          "Email/password and GitHub sign-in",
+          "Turborepo monorepo"
+        ],
+        "flavor": "Every guild, its own laws."
+      },
+      "blogAi": {
+        "name": "Scribe's Quill",
+        "kind": "Blog AI · personal project",
+        "stats": [
+          "Agent (Mastra + OpenAI) that writes drafts",
+          "Approval flow before publishing",
+          "Swagger, Docker and SQL migrations",
+          "Conventions enforced with lefthook and commitlint"
+        ],
+        "flavor": "It writes on its own, but only publishes with your blessing."
+      },
+      "sqlAgent": {
+        "name": "Oracle of Tables",
+        "kind": "SQL Terminal Agent · personal project",
+        "stats": [
+          "Natural-language question → AI-generated SQL",
+          "Confirmation before execution",
+          "Streams and JSON Lines for large files",
+          "Native node:sqlite and node:test"
+        ],
+        "flavor": "Ask, and the tables shall answer."
+      },
+      "linkTree": {
+        "name": "Chain of Links",
+        "kind": "Link Tree · personal project",
+        "stats": [
+          "Next.js 16 with Server Components",
+          "Headless CMS with Prismic",
+          "Content updates without redeploys"
+        ]
+      },
+      "promptManager": {
+        "name": "Codex of Enchantments",
+        "kind": "Prompt Manager · personal project",
+        "stats": [
+          "Prompt manager",
+          "Architecture and testing practice in React/Next"
+        ]
+      },
+      "igniteCall": {
+        "name": "Bell of Summons",
+        "kind": "Ignite Call · personal project",
+        "stats": [
+          "Scheduling integrated with Google Calendar",
+          "Next.js + Prisma"
+        ]
+      },
+      "petshop": {
+        "name": "Familiar's Amulet",
+        "kind": "Petshop · personal project",
+        "stats": [
+          "Pet shop web app",
+          "Next.js + TypeScript"
+        ]
+      },
+      "designSystem": {
+        "name": "Artificer's Palette",
+        "kind": "Ignite UI · design system",
+        "stats": [
+          "Documented reusable components",
+          "Storybook + monorepo"
+        ]
+      },
+      "geminiChat": {
+        "name": "Shell of Whispers",
+        "kind": "Gemini Chat · personal project",
+        "stats": [
+          "Chat with Gemini",
+          "Vue 3 + Vercel AI SDK"
+        ]
+      },
+      "appBoard": {
+        "name": "Strategist's Board",
+        "kind": "Board App · personal project",
+        "stats": [
+          "Roadmap with filters and stages",
+          "Focus on performance and SEO"
+        ]
+      }
+    }
+  },
+  "talents": {
+    "kicker": "Talent Tree",
+    "title": "Points well spent",
+    "description": "Filter by where I used each skill and watch the nodes light up.",
+    "filterLabel": "Used at",
+    "all": "All",
+    "tiers": {
+      "core": "Core",
+      "proficient": "Proficient",
+      "familiar": "Familiar"
+    },
+    "tierHint": {
+      "core": "daily use in production",
+      "proficient": "used in real projects",
+      "familiar": "studied and applied in projects"
+    },
+    "branches": {
+      "frontend": "Front-end",
+      "backend": "Back-end & Data",
+      "ai": "Applied AI",
+      "testing": "Testing",
+      "devops": "Tools & DevOps",
+      "craft": "Craft & Architecture"
+    },
+    "sources": {
+      "seazone": "Seazone",
+      "anjosGuia": "Anjos Guia",
+      "centra": "Centra",
+      "noshbyte": "NoshByte (thesis)",
+      "personal": "Personal projects"
+    }
+  },
+  "achievements": {
+    "kicker": "Achievements",
+    "title": "Trophies unlocked",
+    "unlocked": "Unlocked",
+    "list": {
+      "degree": {
+        "title": "Master of the Tome",
+        "description": "B.Sc. in Computer Science, UFOP (2026)"
+      },
+      "nlwCopa": {
+        "title": "Cup Podium",
+        "description": "Rocketseat NLW Copa · Team Brazil, 3rd place"
+      },
+      "nlwJourney": {
+        "title": "Traveler",
+        "description": "Completed Rocketseat's NLW Journey"
+      },
+      "ignite": {
+        "title": "Flame Kindled",
+        "description": "Rocketseat Ignite tracks in ReactJS and Node.js"
+      },
+      "pioneer": {
+        "title": "Pioneer",
+        "description": "Pioneer and Interstellar Traveler badges at Rocketseat"
+      },
+      "veteran": {
+        "title": "War Veteran",
+        "description": "4+ years in production, from intern to full-stack"
+      }
+    }
+  },
+  "portal": {
+    "kicker": "The Portal",
+    "title": "Shall we form a party?",
+    "description": "I'm available for full-stack or front-end roles, remote or hybrid. If you have a challenge, I have the talent points.",
+    "email": "Email",
+    "copy": "Copy email",
+    "copied": "Copied!",
+    "cv": "Download CV (PDF, Portuguese)",
+    "recruiter": "View résumé on site",
+    "footer": "Forged by Bernardo Freguglia with Next.js, React Three Fiber and plenty of coffee.",
+    "disclaimer": "Fan project: inspired by gothic ARPGs, not affiliated with Blizzard."
+  },
+  "cv": {
+    "metaTitle": "Résumé",
+    "back": "Back to the Sanctuary",
+    "print": "Print / save as PDF",
+    "download": "Download PDF (PT)",
+    "summaryTitle": "Summary",
+    "summary": "Full-stack developer with 4+ years of experience turning ideas into real products for B2B construction, health & beauty and vacation-rental markets. Experienced with React, Next.js, TypeScript, NestJS and PostgreSQL, with a focus on clean architecture (Clean Architecture, SOLID) and practical AI (RAG, LLMs).",
+    "experienceTitle": "Professional experience",
+    "projectsTitle": "Projects",
+    "educationTitle": "Education",
+    "skillsTitle": "Technical skills",
+    "jobs": {
+      "centra": {
+        "company": "Centra",
+        "role": "Front-end Developer",
+        "period": "Jan 2025 – Jan 2026 · São Paulo, Brazil (remote)",
+        "description": "Built the web platform with Next.js, Tailwind CSS and shadcn/ui, including the landing page and the virtual catalog of construction products."
+      },
+      "djcomphany": {
+        "company": "DJComphany · Anjos Guia",
+        "role": "Full-stack Web Developer",
+        "period": "Nov 2024 – Jun 2025 · São Paulo, Brazil (remote)",
+        "description": "Maintained and evolved the Anjos Guia platform with Next.js, NestJS and PostgreSQL. Message automation via Twilio and cron jobs. Built a scheduling system handling multiple professionals, procedures, rooms and hours for beauty clinics, following Clean Architecture and SOLID."
+      },
+      "seazone": {
+        "company": "Seazone",
+        "role": "Front-end Developer",
+        "period": "Mar 2023 – May 2024 · Florianópolis, Brazil (remote)",
+        "description": "Resolved support tickets and built new pages for SAPRON, a vacation-rental management system, with React, TypeScript and Material UI, covering multiple user types and complex permissions."
+      },
+      "seazoneIntern": {
+        "company": "Seazone",
+        "role": "Front-end Development Intern",
+        "period": "Mar 2021 – Mar 2023 · Florianópolis, Brazil (remote)",
+        "description": "Features and bug fixes on SAPRON with React, TypeScript and Styled Components. Multi-property calendar and many create/edit forms for roles such as owner and support agent, plus the guest damage form."
+      },
+      "voluta": {
+        "company": "Voluta · Junior Enterprise (UFOP)",
+        "role": "Volunteer",
+        "period": "Oct 2016 – Feb 2019 · Ouro Preto, Brazil",
+        "description": "Worked in marketing and HR and on technical projects: a digital database for the Pilar Church inventory and updates to the institute website with OpenScholar."
+      }
+    },
+    "projects": {
+      "noshbyte": "NoshByte: LLM-based food recommendation framework with RAG (pgvector) and multiple providers (OpenAI, Anthropic, Google, Groq). ElysiaJS (Bun), PostgreSQL and Drizzle following Clean Architecture, SOLID and DDD; Next.js front end with streaming chat.",
+      "saasRbac": "Next SaaS RBAC: multi-tenant boilerplate with Next.js, Fastify, Prisma, Zod and Turborepo; authentication (email/password, GitHub, recovery) and RBAC with 5 roles."
+    },
+    "education": {
+      "school": "Federal University of Ouro Preto (UFOP)",
+      "degree": "B.Sc. in Computer Science",
+      "period": "Sep 2016 – Aug 2026",
+      "thesis": "Thesis: An LLM-based framework for food recommendation systems."
+    }
+  },
+  "demos": {
+    "calendar": {
+      "title": "Multi-property calendar",
+      "hint": "Scroll horizontally through dates and vertically through properties.",
+      "filterAll": "All",
+      "filterReservations": "Reservations",
+      "filterBlocks": "Blocks",
+      "ownerView": "Owner view",
+      "property": "Property",
+      "reservation": "Reservation",
+      "block": "Block",
+      "nights": "{count, plural, one {# night} other {# nights}}",
+      "ownerNote": "In the owner view, only their properties are shown and guest names are hidden.",
+      "guestHidden": "Guest",
+      "maintenance": "Maintenance",
+      "ownerUse": "Owner stay",
+      "properties": "{count} properties · {days} days"
+    },
+    "multistep": {
+      "title": "Host onboarding",
+      "steps": {
+        "host": "Host",
+        "property": "Property",
+        "review": "Review"
+      },
+      "fields": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone",
+        "code": "Property code",
+        "city": "City",
+        "bedrooms": "Bedrooms",
+        "type": "Type"
+      },
+      "types": {
+        "apartment": "Apartment",
+        "house": "House",
+        "studio": "Studio"
+      },
+      "errors": {
+        "name": "Enter first and last name",
+        "email": "Invalid email",
+        "phone": "Use the format (11) 91234-5678",
+        "code": "Use 3 letters and 3 digits, e.g. FLN012",
+        "city": "Enter the city",
+        "bedrooms": "Between 1 and 10"
+      },
+      "back": "Back",
+      "next": "Next",
+      "submit": "Summon",
+      "success": "Host summoned!",
+      "successDescription": "In production this would call the API and redirect to the host profile.",
+      "restart": "Start over",
+      "stepOf": "Step {current} of {total}"
+    },
+    "scheduler": {
+      "title": "Smart scheduling",
+      "service": "Procedure",
+      "day": "Day",
+      "slots": "Available slots",
+      "noSlots": "No slots available on this day.",
+      "with": "with",
+      "room": "Room",
+      "minutes": "{count} min",
+      "rules": "Rules applied",
+      "ruleSkill": "Only professionals who perform the procedure",
+      "ruleShift": "Professional shift ∩ clinic hours",
+      "ruleRoom": "Suitable room free for the whole session",
+      "ruleBusy": "No conflict with existing appointments",
+      "book": "Book",
+      "booked": "Booked! That slot just left the list.",
+      "reset": "Clear bookings",
+      "closed": "Closed",
+      "weekdays": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "services": {
+        "cleansing": "Facial cleansing",
+        "massage": "Relaxing massage",
+        "laser": "Laser hair removal",
+        "brows": "Brow design"
+      }
+    },
+    "seasonal": {
+      "title": "Platform seasonal theme",
+      "tenant": "Clinic platform",
+      "tagline": "Online booking for beauty clinics",
+      "cta": "Book now",
+      "themes": {
+        "default": "Default",
+        "christmas": "Christmas",
+        "newYear": "New Year",
+        "easter": "Easter"
+      },
+      "banners": {
+        "default": "Your self-care moment starts here.",
+        "christmas": "Glowing Christmas: 20% off gift packages.",
+        "newYear": "New year, new skin. Book your ritual.",
+        "easter": "Sweet Easter: get a free extra hydration."
+      },
+      "tokensTitle": "Applied tokens",
+      "clinicsLabel": "Clinics served",
+      "clinics": [
+        "Studio Lumina",
+        "Aura Clinic",
+        "Bela Space"
+      ]
+    },
+    "catalog": {
+      "title": "Multi-tenant catalog",
+      "tenantLabel": "Store",
+      "search": "Search materials…",
+      "addToQuote": "Add to quote",
+      "inQuote": "In quote",
+      "quote": "Quote",
+      "empty": "No materials found.",
+      "unit": "per {unit}",
+      "categories": {
+        "all": "All",
+        "structure": "Structure",
+        "finishing": "Finishing",
+        "hydraulic": "Plumbing"
+      }
+    },
+    "noshbyte": {
+      "title": "Thesis results",
+      "chartTitle": "Quality × latency",
+      "chartDescription": "Average overall score (two LLM judges, 1–5 scale) against average latency per response. Each dot is a model evaluated on 90 scenarios.",
+      "quality": "Overall score",
+      "latency": "Average latency (s)",
+      "tokens": "Average tokens",
+      "best": "Best score",
+      "fastest": "Fastest",
+      "scenarios": "scenarios",
+      "models": "models",
+      "judges": "LLM judges",
+      "chatTitle": "Chat preview",
+      "chatNote": "Pre-recorded answers, no API calls.",
+      "prompts": [
+        "Something light and gluten-free near me",
+        "A well-reviewed vegetarian dish for dinner"
+      ],
+      "answers": [
+        "Based on your profile (gluten-free, prefers light meals), I recommend the **Salmon poke** at Maré Alta: rated 4.7 across 128 reviews, with several guests mentioning gluten-free options. Alternative: **Warm quinoa salad** at Verde Vivo.",
+        "For tonight: **Mushroom risotto** at Trattoria Pilar (4.8, reviews praise the texture) or **Chickpea curry** at Masala House, which matches your taste for spiced dishes."
+      ],
+      "thinking": "Searching similar dishes in pgvector…",
+      "ask": "Ask",
+      "table": "View as table",
+      "model": "Model"
+    }
+  },
+  "notFound": {
+    "title": "You got lost in the dungeons",
+    "description": "This page doesn't exist, or a demon devoured it.",
+    "back": "Back to the Sanctuary"
+  }
+}
